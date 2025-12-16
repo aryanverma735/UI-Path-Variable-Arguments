@@ -1,0 +1,8 @@
+FOR DIRECTORY DISPLAY:
+ 
+If(Ntwk_Rmbrs_Only_Ind_Directory_Display Is Nothing OrElse Convert.ToString(Ntwk_Rmbrs_Only_Ind_Directory_Display).Trim() = "", "",
+    If(Convert.ToString(Ntwk_Rmbrs_Only_Ind_Directory_Display).Trim().ToUpperInvariant().StartsWith("Y-DISPLAY"), "Y",
+        If(Convert.ToString(Ntwk_Rmbrs_Only_Ind_Directory_Display).Trim().ToUpperInvariant().StartsWith("N-SUPRESS") OrElse
+           Convert.ToString(Ntwk_Rmbrs_Only_Ind_Directory_Display).Trim().ToUpperInvariant().StartsWith("N-SUPPRESS"), "N", "")
+    )
+)
