@@ -1,0 +1,8 @@
+FOR ROLE CODE:
+
+If(Linkage_Role_Code Is Nothing OrElse Convert.ToString(Linkage_Role_Code).Trim() = "", "",     If(UCase(Convert.ToString(Linkage_Role_Code).Trim()) = "Specialist", "S", 
+        If(UCase(Convert.ToString(Linkage_Role_Code).Trim()) = "PCP", "P",             
+               If(UCase(Convert.ToString(Linkage_Role_Code).Trim()) = "Dual", "D", "")       
+    )   
+  ) 
+)
