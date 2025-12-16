@@ -1,0 +1,9 @@
+FOR GENDER:
+ 
+If(Ntwk_Rmbrs_Only_Ind_Gender Is Nothing OrElse Convert.ToString(Ntwk_Rmbrs_Only_Ind_Gender).Trim() = "", "",
+    If(UCase(Convert.ToString(Ntwk_Rmbrs_Only_Ind_Gender).Trim()) = "MALE", "8001",
+        If(UCase(Convert.ToString(Ntwk_Rmbrs_Only_Ind_Gender).Trim()) = "FEMALE", "8003",
+            If(UCase(Convert.ToString(Ntwk_Rmbrs_Only_Ind_Gender).Trim()) = "BOTH", "8002", "")
+        )
+    )
+)
